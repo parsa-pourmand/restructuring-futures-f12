@@ -11,6 +11,7 @@ RUN apt-get update -y && \
 # Download the Deno binary using the official install script
 RUN curl -fsSL https://deno.land/x/install/install.sh | sh -s v${VERSION}
 
+
 # Add the deno group and user, and set the necessary permissions
 RUN addgroup --gid 1993 deno && \
     adduser --uid 1993 --gid 1993 deno && \
