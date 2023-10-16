@@ -33,8 +33,8 @@ RUN mkdir -p /app/data/ && chmod -R 777 /app/data/
 VOLUME [ "/app/data" ]
 
 # Copy your server.ts and known_shares.json files
-COPY server.ts ./server.ts
-COPY known_shares.json ./known_shares.json
+COPY server/others/server.ts ./server.ts
+COPY server/others/known_shares.json ./known_shares.json
 
 # Set the user for subsequent commands (and the running container) to root
 USER root
